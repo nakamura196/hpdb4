@@ -1,8 +1,30 @@
 <template>
-  <main class="main">
-    <h1 class="title">{{ label }}</h1>
-    <p class="publishedAt">{{ /*selections.length*/ }}</p>
-  </main>
+  <div>
+    <v-container class="py-0">
+      <iframe
+        :src="getIframeUrl()"
+        width="100%"
+        height="500"
+        allowfullscreen
+        frameborder="0"
+      ></iframe>
+    </v-container>
+    <!--
+    <v-sheet class="py-2" color="grey lighten-3">
+      <v-container>
+        <h2>{{ label }}</h2>
+      </v-container>
+    </v-sheet>
+    -->
+    <v-container>
+      <dl v-for="(obj, key) in metadata" :key="key" class="row">
+        <dt class="col-sm-3 text-muted">{{ obj.label }}</dt>
+        <dd class="col-sm-9">
+          {{ Array.isArray(obj.value) ? obj.value.join(', ') : obj.value }}
+        </dd>
+      </dl>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -16,23 +38,35 @@ export default {
       const { data } = await axios.get(
         `https://moeller.jinsha.tsukuba.ac.jp/data/curation.json`
       )
-      return data
+      const result = data.selections[0].members[0]
+      result.manifest = data.selections[0].within['@id']
+      return result
     }
+  },
+
+  methods: {
+    getIframeUrl() {
+      const url =
+        '/curation/?manifest=' +
+        this.manifest +
+        '&canvas=' +
+        encodeURIComponent(this['@id'])
+      return url
+    },
   },
 
   head() {
     const title = this.label
-    const image =
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Heratic_script_limestone.jpg/220px-Heratic_script_limestone.jpg'
-    const description = 'aaa'
     return {
       title,
       meta: [
+        /*
         {
           hid: 'description',
           name: 'description',
           content: description,
         },
+        */
         {
           hid: 'og:title',
           property: 'og:title',
@@ -43,20 +77,22 @@ export default {
           property: 'og:type',
           content: 'article',
         },
+        /*
         {
           hid: 'og:description',
           property: 'og:description',
           content: description,
         },
+        */
         {
           hid: 'og:url',
           property: 'og:url',
-          content: this.url,
+          content: this.related,
         },
         {
           hid: 'og:image',
           property: 'og:image',
-          content: image,
+          content: this.thumbnail,
         },
         {
           hid: 'twitter:card',
