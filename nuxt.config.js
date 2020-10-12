@@ -106,7 +106,7 @@ export default {
               // const id = metadataObj.h_sort.replace('/', '_')
 
               pages.push({
-                route: `/${id}`,
+                route: `/item/${id}`,
                 payload: member,
               })
             }
