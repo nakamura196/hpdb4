@@ -44,10 +44,17 @@ export default {
     }
   },
 
+  data() {
+    return {
+      baseUrl: process.env.BASE_URL,
+    }
+  },
+
   methods: {
     getIframeUrl() {
       const url =
-        '/curation/?manifest=' +
+        this.baseUrl +
+        'curation/?manifest=' +
         this.manifest +
         '&canvas=' +
         encodeURIComponent(this['@id'])

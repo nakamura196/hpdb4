@@ -3,6 +3,9 @@ import axios from 'axios'
 
 import md5 from 'crypto-js/md5'
 
+const environment = process.env.NODE_ENV || 'local'
+const env = require(`./env/${environment}.ts`)
+
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
@@ -39,6 +42,10 @@ const manifestIcon = 'img/icons/icon-512.png'
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
+
+  srcDir: 'src/',
+
+  env,
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -180,7 +187,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
