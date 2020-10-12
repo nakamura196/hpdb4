@@ -13,20 +13,125 @@ const routerBase =
       }
     : {}
 
+const GOOGLE_ANALYTICS_ID = 'abc'
+
+// path
+const baseUrl = 'https://nakamura196.github.io/hpdb4'
+const baseDir = '/'
+const basePath = baseUrl + baseDir
+
+// meta
+const lang = 'ja'
+const siteName = 'Hieratische Paläographie DB'
+const siteDesc =
+  "This is a retrieval system for hieratic scripts; it uses IIIF format images (owned by the Asian Research Library of the University of Tokyo) of Georg Möller's Hieratische Paläographie (1909–36)."
+const siteKeywords = 'IIIF, Hieratic, Hieroglyph'
+
+// images
+const iconImages = baseDir + 'img/icons/'
+const ogpImages = basePath + 'img/ogp/' // cdnPath + 'img/ogp/'
+
+// pwa
+const shortName = 'HPDB'
+const manifestIcon = 'img/icons/icon-512.png'
+// const splashscreens = cdnPath + 'img/splashscreens/'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - hpdb',
+    htmlAttrs: {
+      prefix: 'og: http://ogp.me/ns#',
+      lang,
+    },
+    titleTemplate: `%s - ${siteName}`,
     title: 'hpdb',
     meta: [
       { charset: 'utf-8' },
+      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        name: 'format-detection',
+        content: 'telephone=no, email=no, address=no',
+      },
+      // SEO関連
+      { hid: 'description', name: 'description', content: siteDesc },
+      { hid: 'keywords', name: 'keywords', content: siteKeywords },
+      // ogp関連
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: siteName,
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: basePath },
+      { hid: 'og:title', property: 'og:title', content: siteName },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: siteDesc,
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: `${ogpImages}home.jpg`,
+      },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      // pwa iOS
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      {
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: 'black-translucent',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'icon',
+        sizes: '16x16',
+        type: 'image/png',
+        href: iconImages + 'favicon-16.png',
+      },
+      {
+        rel: 'icon',
+        sizes: '32x32',
+        type: 'image/png',
+        href: iconImages + 'favicon-32.png',
+      },
+      {
+        rel: 'icon',
+        sizes: '48x48',
+        type: 'image/png',
+        href: iconImages + 'favicon-48.png',
+      },
+      {
+        rel: 'icon',
+        sizes: '72x72',
+        type: 'image/png',
+        href: iconImages + 'favicon-72.png',
+      },
+      // apple touch icon
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: iconImages + 'apple-touch-icon.png',
+      },
+    ],
+  },
+
+  manifest: {
+    lang,
+    name: siteName,
+    short_name: shortName,
+    description: siteDesc,
+    background_color: '#ffffff',
+    theme_color: '#ffffff',
+    display: 'standalone',
+    orientation: 'portrait',
+  },
+  icon: {
+    iconFileName: manifestIcon,
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -52,7 +157,20 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: GOOGLE_ANALYTICS_ID,
+      },
+    ],
   ],
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: baseUrl,
+    generate: true,
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
@@ -102,8 +220,6 @@ export default {
 
               const memberId = member['@id']
               const id = md5(memberId)
-              console.log({ id })
-              // const id = metadataObj.h_sort.replace('/', '_')
 
               pages.push({
                 route: `/item/${id}`,
