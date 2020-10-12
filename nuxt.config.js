@@ -16,8 +16,8 @@ const routerBase =
 const GOOGLE_ANALYTICS_ID = 'abc'
 
 // path
-const baseUrl = 'https://nakamura196.github.io/hpdb4'
-const baseDir = '/'
+const baseUrl = 'https://nakamura196.github.io/'
+const baseDir = 'hpdb4/'
 const basePath = baseUrl + baseDir
 
 // meta
@@ -164,12 +164,13 @@ export default {
         id: GOOGLE_ANALYTICS_ID,
       },
     ],
+    // Simple usage
+    '@nuxtjs/amp',
   ],
 
   sitemap: {
     path: '/sitemap.xml',
     hostname: baseUrl,
-    generate: true,
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
