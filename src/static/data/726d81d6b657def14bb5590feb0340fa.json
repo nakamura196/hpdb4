@@ -1,0 +1,41 @@
+[
+  {
+    "@id": "https://nakamura196.github.io/hpdb4/data/726d81d6b657def14bb5590feb0340fa.json",
+    "http://example.org/hieroglyphNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/W24.json"
+      }
+    ],
+    "http://example.org/identifier": [
+      {
+        "@value": "726d81d6b657def14bb5590feb0340fa"
+      }
+    ],
+    "http://example.org/möllerNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/möllerNo/572.json"
+      }
+    ],
+    "http://example.org/note": [
+      {
+        "@value": "495(W24), 572(W24). Identification is uncertain."
+      },
+      {
+        "@id": "495(W24), 572(W24). Identification is uncertain."
+      }
+    ],
+    "http://example.org/phoneWord": [
+      {
+        "@id": "Sn"
+      },
+      {
+        "@id": "qd"
+      }
+    ],
+    "http://example.org/vol": [
+      {
+        "@value": 2
+      }
+    ]
+  }
+]

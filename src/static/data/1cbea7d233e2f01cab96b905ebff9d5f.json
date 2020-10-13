@@ -1,0 +1,41 @@
+[
+  {
+    "@id": "https://nakamura196.github.io/hpdb4/data/1cbea7d233e2f01cab96b905ebff9d5f.json",
+    "http://example.org/hieroglyphNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/N12.json"
+      },
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/Num2.json"
+      }
+    ],
+    "http://example.org/identifier": [
+      {
+        "@value": "1cbea7d233e2f01cab96b905ebff9d5f"
+      }
+    ],
+    "http://example.org/möllerNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/möllerNo/311.json"
+      }
+    ],
+    "http://example.org/note": [
+      {
+        "@id": "309(N12/N11)+615(Num2)"
+      },
+      {
+        "@value": "309(N12/N11)+615(Num2)"
+      }
+    ],
+    "http://example.org/phoneWord": [
+      {
+        "@id": "Abd 2"
+      }
+    ],
+    "http://example.org/vol": [
+      {
+        "@value": 2
+      }
+    ]
+  }
+]

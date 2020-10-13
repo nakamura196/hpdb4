@@ -1,0 +1,41 @@
+[
+  {
+    "@id": "https://nakamura196.github.io/hpdb4/data/39964290fc237cdfb5e4fdf3c6fa4e25.json",
+    "http://example.org/hieroglyphNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/A2.json"
+      }
+    ],
+    "http://example.org/identifier": [
+      {
+        "@value": "39964290fc237cdfb5e4fdf3c6fa4e25"
+      }
+    ],
+    "http://example.org/möllerNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/möllerNo/35.json"
+      }
+    ],
+    "http://example.org/note": [
+      {
+        "@value": "A2, A68 or A85?"
+      },
+      {
+        "@id": "A2, A68 or A85?"
+      }
+    ],
+    "http://example.org/phoneWord": [
+      {
+        "@id": "mri"
+      },
+      {
+        "@id": "wnm"
+      }
+    ],
+    "http://example.org/vol": [
+      {
+        "@value": 2
+      }
+    ]
+  }
+]

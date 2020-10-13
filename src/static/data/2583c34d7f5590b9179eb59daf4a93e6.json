@@ -1,0 +1,44 @@
+[
+  {
+    "@id": "https://nakamura196.github.io/hpdb4/data/2583c34d7f5590b9179eb59daf4a93e6.json",
+    "http://example.org/hieroglyphNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/S42.json"
+      }
+    ],
+    "http://example.org/identifier": [
+      {
+        "@value": "2583c34d7f5590b9179eb59daf4a93e6"
+      }
+    ],
+    "http://example.org/möllerNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/möllerNo/451.json"
+      }
+    ],
+    "http://example.org/note": [
+      {
+        "@id": "449(S42)=sxm, 450(S42)=xrp, 451(S42)=abA, see 539(Y8)=sxm"
+      },
+      {
+        "@value": "449(S42)=sxm, 450(S42)=xrp, 451(S42)=abA, see 539(Y8)=sxm"
+      }
+    ],
+    "http://example.org/phoneWord": [
+      {
+        "@id": "sxm"
+      },
+      {
+        "@id": "xrp"
+      },
+      {
+        "@id": "abA"
+      }
+    ],
+    "http://example.org/vol": [
+      {
+        "@value": 3
+      }
+    ]
+  }
+]

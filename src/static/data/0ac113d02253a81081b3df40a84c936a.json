@@ -1,0 +1,38 @@
+[
+  {
+    "@id": "https://nakamura196.github.io/hpdb4/data/0ac113d02253a81081b3df40a84c936a.json",
+    "http://example.org/hieroglyphNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/D35.json"
+      }
+    ],
+    "http://example.org/identifier": [
+      {
+        "@value": "0ac113d02253a81081b3df40a84c936a"
+      }
+    ],
+    "http://example.org/möllerNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/möllerNo/111.json"
+      }
+    ],
+    "http://example.org/note": [
+      {
+        "@value": "111(D35) is occasionally used as 331(N31). \nSee 332(D35)."
+      },
+      {
+        "@id": "111(D35) is occasionally used as 331(N31). \nSee 332(D35)."
+      }
+    ],
+    "http://example.org/phoneWord": [
+      {
+        "@id": "n"
+      }
+    ],
+    "http://example.org/vol": [
+      {
+        "@value": 3
+      }
+    ]
+  }
+]

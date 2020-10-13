@@ -1,0 +1,47 @@
+[
+  {
+    "@id": "https://nakamura196.github.io/hpdb4/data/e7d8f83b39f0ab85df4fd74474821fb6.json",
+    "http://example.org/hieroglyphNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/X1.json"
+      },
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/D21.json"
+      },
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/D36/D37.json"
+      }
+    ],
+    "http://example.org/identifier": [
+      {
+        "@value": "e7d8f83b39f0ab85df4fd74474821fb6"
+      }
+    ],
+    "http://example.org/möllerNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/möllerNo/103B.json"
+      }
+    ],
+    "http://example.org/note": [
+      {
+        "@value": "91(D21)+99(D36)/103(D37)+575(X1)"
+      },
+      {
+        "@id": "91(D21)+99(D36)/103(D37)+575(X1)"
+      }
+    ],
+    "http://example.org/phoneWord": [
+      {
+        "@id": "rdit"
+      },
+      {
+        "@id": "rdi"
+      }
+    ],
+    "http://example.org/vol": [
+      {
+        "@value": 3
+      }
+    ]
+  }
+]

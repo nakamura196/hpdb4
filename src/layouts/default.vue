@@ -63,6 +63,15 @@
               <v-list-item-title>IIIF Curation Platfrom</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+
+          <v-list-item link :href="'snorql'" target="_blank">
+            <v-list-item-action>
+              <v-icon>mdi-image</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>SPARQL Endpoint</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
         </v-list>
       </v-navigation-drawer>
 
@@ -90,6 +99,7 @@
 export default {
   data: () => ({
     drawer: false,
+    // baseUrl: process.env.BASE_URL,
   }),
 }
 </script>

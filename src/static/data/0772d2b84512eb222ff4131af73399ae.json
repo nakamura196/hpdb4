@@ -1,0 +1,41 @@
+[
+  {
+    "@id": "https://nakamura196.github.io/hpdb4/data/0772d2b84512eb222ff4131af73399ae.json",
+    "http://example.org/hieroglyphNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/keyword/F46/F47/F48/F49.json"
+      }
+    ],
+    "http://example.org/identifier": [
+      {
+        "@value": "0772d2b84512eb222ff4131af73399ae"
+      }
+    ],
+    "http://example.org/möllerNo": [
+      {
+        "@id": "https://nakamura196.github.io/hpdb4/term/möllerNo/526B.json"
+      }
+    ],
+    "http://example.org/note": [
+      {
+        "@id": "Is 526B another grapheme?"
+      },
+      {
+        "@value": "Is 526B another grapheme?"
+      }
+    ],
+    "http://example.org/phoneWord": [
+      {
+        "@id": "wdn"
+      },
+      {
+        "@id": "pXr"
+      }
+    ],
+    "http://example.org/vol": [
+      {
+        "@value": 3
+      }
+    ]
+  }
+]
